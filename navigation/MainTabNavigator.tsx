@@ -13,9 +13,11 @@ import { Fontisto } from '@expo/vector-icons';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import ChatScreen from '../screens/ChatScreen';
+import StampScreen from '../screens/StampScreen';
+import LinkScreen from '../screens/LinkScreen';
+import SnapScreen from '../screens/SnapScreen';
+import { MainTabParamList, SnapParamList, ChatParamList,StampParamList, LinkParamList } from '../types';
 
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
   
@@ -42,7 +44,7 @@ export default function MainTabNavigator() {
         }}>
       <MainTab.Screen
         name="Snap"
-        component={TabOneNavigator}
+        component={SnapScreen}
         options={{
           tabBarIcon: ({ color }) => <Fontisto name="camera" color={color} size={20}/>,
           tabBarLabel: () => null,
@@ -53,17 +55,17 @@ export default function MainTabNavigator() {
       />
       <MainTab.Screen
         name="Coms"
-        component={TabTwoNavigator}
+        component={ChatScreen}
        
       />
       <MainTab.Screen
         name="Stamps"
-        component={TabTwoNavigator}
+        component={StampScreen}
        
       />
       <MainTab.Screen
         name="Links"
-        component={TabTwoNavigator}
+        component={LinkScreen}
        
       />
     </MainTab.Navigator>
@@ -78,30 +80,62 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
 
-function TabOneNavigator() {
+
+
+
+const SnapStack = createStackNavigator<SnapParamList>();
+
+function SnapNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
+    <SnapStack.Navigator>
+      <SnapStack.Screen
+        name="SnapScreen"
+        component={SnapScreen}
         options={{ headerTitle: 'Page One' }}
       />
-    </TabOneStack.Navigator>
+    </SnapStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const ChatStack = createStackNavigator<ChatParamList>();
 
-function TabTwoNavigator() {
+function ChatNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
+    <ChatStack.Navigator>
+      <ChatStack.Screen
+        name="ChatScreen"
+        component={ChatScreen}
         options={{ headerTitle: 'Page Two' }}
       /> 
-    </TabTwoStack.Navigator>
+    </ChatStack.Navigator>
+  );
+}
+
+const StampStack = createStackNavigator<StampParamList>();
+
+function StampNavigator() {
+  return (
+    <StampStack.Navigator>
+      <StampStack.Screen
+        name="StampScreen"
+        component={StampScreen}
+        options={{ headerTitle: 'Page One' }}
+      />
+    </StampStack.Navigator>
+  );
+}
+
+const LinkStack = createStackNavigator<LinkParamList>();
+
+function LinkNavigator() {
+  return (
+    <LinkStack.Navigator>
+      <LinkStack.Screen
+        name="LinkScreen"
+        component={LinkScreen}
+        options={{ headerTitle: 'Page Two' }}
+      /> 
+    </LinkStack.Navigator>
   );
 }
