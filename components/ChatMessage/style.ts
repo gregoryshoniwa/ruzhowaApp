@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import randomColor from "randomcolor";
+//import randomColor from "randomcolor";
 import Colors from '../../constants/Colors';
 const styles = StyleSheet.create({
     constainer:{
