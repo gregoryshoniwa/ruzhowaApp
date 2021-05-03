@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
         flexDirection :'row'
     },
     midContainer:{
-        justifyContent:'space-around'
+        flexDirection :'column',
+        paddingTop:7,
+        width: '50%',
     },
     avatar:{
         width:60,
@@ -21,14 +23,17 @@ const styles = StyleSheet.create({
     },
     username:{
         fontWeight:'bold',
-        fontSize:16
+        fontSize:16,
+        paddingBottom:5
     },
     lastMessage:{
         fontSize:16,
-        color:'grey'
+        color:'grey',
+        
+       
     },
     time:{
-        fontSize:16,
+        fontSize:14,
         color:'grey'
     }
 });
