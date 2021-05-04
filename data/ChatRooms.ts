@@ -143,4 +143,36 @@ export default [
       content: 'Meet me at the same place',
       createdAt: '2020-09-25T15:40:00.000Z',
     },
+  },{
+    id: '10',
+    users: [{
+      id: 'u1',
+      name: 'Vadim',
+      imageUri: 'https://source.unsplash.com/random/200x200?sig=1',
+    }, {
+      id: 'u11',
+      name: 'Gregory Shoniwa',
+      imageUri: 'https://source.unsplash.com/random/200x200?sig=18',
+    }],
+    lastMessage: {
+      id: 'm10',
+      content: 'Meet me at the same place',
+      createdAt: '2020-09-25T15:40:00.000Z',
+    },
+  },{
+    id: '11',
+    users: [{
+      id: 'u1',
+      name: 'Vadim',
+      imageUri: 'https://source.unsplash.com/random/200x200?sig=1',
+    }, {
+      id: 'u12',
+      name: 'Blessing Jolie',
+      imageUri: 'https://source.unsplash.com/random/200x200?sig=19',
+    }],
+    lastMessage: {
+      id: 'm11',
+      content: 'Meet me at the same place',
+      createdAt: '2020-09-25T15:40:00.000Z',
+    },
   }]

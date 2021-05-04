@@ -22,7 +22,7 @@ const InputBox = () =>{
         }else{
             onSendPress();
         }
-    }
+    } 
     return(
         <View style={styles.constainer}>
             <View  style={styles.mainContainer}>

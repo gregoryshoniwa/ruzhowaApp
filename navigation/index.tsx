@@ -11,6 +11,7 @@ import { ColorSchemeName } from 'react-native';
 import Colors from "../constants/Colors";
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import ContactsScreen from '../screens/ContactsSceen';
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -72,6 +73,7 @@ function RootNavigator() {
           ) 
         })} 
       />
+      <Stack.Screen name="Contacts" component={ContactsScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
