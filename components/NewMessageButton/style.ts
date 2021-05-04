@@ -9,8 +9,9 @@ const styles = StyleSheet.create({
         borderRadius:30,
         justifyContent:'center',
         alignItems:'center',
-        //position:'absolute',
-        bottom:20
+        position:'absolute',
+        bottom:30,
+        left:100
     },
     image:{
         width:55,
