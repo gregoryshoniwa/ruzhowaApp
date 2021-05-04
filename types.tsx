@@ -15,6 +15,8 @@ export type MainTabParamList = {
   Coms: undefined;
   Links: undefined;
   Stamps: undefined;
+  Trade:undefined;
+  Account:undefined;
 };
 
 export type SnapParamList = {

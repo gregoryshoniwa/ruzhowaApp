@@ -42,7 +42,7 @@ export default function MainTabNavigator() {
         showIcon:true,
 
         }}>
-      <MainTab.Screen
+      {/* <MainTab.Screen
         name="Snap"
         component={SnapScreen}
         options={{
@@ -52,19 +52,19 @@ export default function MainTabNavigator() {
           
         }}
         
-      />
+      /> */}
       <MainTab.Screen
         name="Coms"
         component={ChatScreen}
        
       />
       <MainTab.Screen
-        name="Stamps"
+        name="Trade"
         component={StampScreen}
        
       />
       <MainTab.Screen
-        name="Links"
+        name="Wallet"
         component={LinkScreen}
        
       />
